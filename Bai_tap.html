@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="description" content="baitapchoi">
+	<meta name="author" content="Harny">
+	<meta name="contry" content="USA">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!--phải dùng cái này thì ms chạy flex trên điện thoại đc-->
+	<link rel="stylesheet" type="text/css" href="css/Bai_tap.css">
+	<!-- thẻ <link> dùng để nối các file theo đường dẫn -->
+	<title>My New Website</title>
+	<!-- <style type="text/css"> 
+		h1{
+			color: red
+		}
+		h2{
+			color: yellow
+		}
+	</style> -->
+	<!-- Ko nên code css ngay trên file .html vì dễ gây rối; nên tạo một file css riêng và nối vào file .html cần dùng tương ứng -->
+</head>
+<body>
+
+	<!-- thẻ <style></style> dùng để code css -->
+
+	<h1 id="menu_text">My Resume</h1>
+	<!-- <h2 class="test_h2">Test</h2> : về cơ bản id và class giống nhau nhưng id dùng cho 1 cái còn class dùng cho nhiều cái-->
+
+	<!--div là 1 thẻ không có nghĩa gì cả, cái nội dung gì cũng cần được kẹp với các cái thẻ, không biết nên kẹp bởi gì thì kẹp nó bởi 1 cái div xong tự đặt 1 cái id có nghĩa cho nó-->
+
+	<!--<nav> để dùng cho menu (navigation), nên dùng những cái như nav, footer, ... thay vì div vì nó có nghĩa (semantic meaning). Cái nào không có tên thì mới dùng div, nếu dùng div hết thì cũng không sao.-->
+	<!-- Menu thực chất là các đường link -->
+	<nav>
+		<a href="#contact" class="menu_left">About me</a>
+		<a href="#education" class="menu_left">Education</a>
+		<a href="#score" class="menu_left">Score</a>
+		<a href="#social_media" class="menu_right">Social Media</a>
+		<a href="#family" class="menu_right">Family</a>
+	</nav>
+
+	<div id="flex_container">
+
+		<div id="left_side">
+			<h2 id="contact">About me</h2>
+			<img src="assets/canh.jpg" alt="My photo" width="100" height="100">
+			<p><i>I love learning Information Technology</i></p>
+			<ul>
+				<li><b>Fullname: </b> Harny</li>
+				<li><b>Contry: </b> Vietnam</li>
+			</ul>
+
+			
+			<h2 id="education">Education</h2>
+			<ol>
+				<li>Lien Chau Kindergarten</li>
+				<li>Nhat Tan primary school</li> 
+				<li>Quang An junior high school</li>
+			</ol>
+			
+			<h2 id="score">Score</h2>
+			<table>
+				<tr>
+					<th rowspan="2"></th>
+					<th colspan="2">Math</th>
+					<th rowspan="2">Physics</th>
+					<th rowspan="2">IT</th>
+				</tr>
+				<tr>
+					<th>Math 1</th>
+					<th>Math 2</th>
+				</tr>
+				<tr>
+					<th>2019</th>
+					<td>0</td>
+					<td>0</td>
+					<td>9</td>
+					<td>10</td>
+				</tr>
+				<tr>
+					<th>2020</th>
+					<td>0</td>
+					<td>0</td>
+					<td>2</td>
+					<td>9</td>
+				</tr>
+				<tr>
+					<th>2021</th>
+					<td>0</td>
+					<td>0</td>
+					<td>8</td>
+					<td>8</td>
+				</tr>
+			</table>
+			
+			<h2 id="social_media">Social Media</h2>
+			<a href="https://youtube.com">Youtube</a>
+			<br>
+			<a href="https://facebook.com">Facebook</a>
+			<a href="mailto:hoanamanhn@gmail.com">E-mail</a>
+
+		</div>
+
+		<div id="right_side">
+
+			<h2 id="family">No content</h2>
+			<div id="family_container">
+				<div class="family_item">
+					<img class="family_img" src="assets/canh.jpg">
+					<div class="family_title">1. canh</div>
+					<div class="family_desc"><!--desc viết tắt của description: mô tả-->
+						ABCDEFGHIJKLMNOPQOSTUVYZ;
+					</div> 
+				</div>
+				<div class="family_item">
+					<img class="family_img" src="assets/canh.jpg">
+					<div class="family_title">2. Alphabet</div>
+					<div class="family_desc">
+						ABCDEFGHIJKLMNOPQOSTUVYZ;
+					</div> 
+				</div>
+				<div class="family_item">
+					<img class="family_img" src="assets/canh.jpg">
+					<div class="family_title">3. Alphabet</div>
+					<div class="family_desc">
+						ABCDEFGHIJKLMNOPQOSTUVYZ;
+					</div>
+				</div>
+				<div class="family_item">
+					<img class="family_img" src="assets/canh.jpg">
+					<div class="family_title">4. Alphabet</div>
+					<div class="family_desc">
+						ABCDEFGHIJKLMNOPQOSTUVYZ;
+					</div>
+				</div>
+				<div class="family_item">
+					<img class="family_img" src="assets/canh.jpg">
+					<div class="family_title">5. Alphabet</div>
+					<div class="family_desc">
+						ABCDEFGHIJKLMNOPQOSTUVYZ;
+					</div>
+				</div>
+				<div class="family_item">
+					<img class="family_img" src="assets/canh.jpg">
+					<div class="family_title">6. Alphabet</div>
+					<div class="family_desc">
+						ABCDEFGHIJKLMNOPQOSTUVYZ;
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	
+	<!-- các file ảnh thường đc để trong folder assets -->
+	<footer>Create by Harny Rika</footer>
+	
+</body>
+</html>
