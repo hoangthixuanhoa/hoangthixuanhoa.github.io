@@ -1,0 +1,171 @@
+h1{
+	margin: 0px;
+}
+
+#menu_text {
+	color: white;
+	background: #1BBC9D;
+	text-align: center; /* text là chữ; align là sắp xếp vị trí; center là chính giữa */
+	padding: 80px; /* padding là căn đều cả trên dưới trái phải đều là 80px */
+					/*padding: 80px 60px
+theo thứ tự lần lượt là:   trên dưới; trái phải*/
+					/* padding: 80px 20px 20px 80px; 
+theo thứ tự lần lượt là        trên; phải; dưới; trái*/
+	margin: 0px;
+}
+
+nav{
+	background: #343334;
+	/*padding: 14px 20px;*/
+	overflow: hidden; /* Overflow: hidden cái nav, loại bỏ phần chừa ra */
+}
+
+nav a {
+	color: white;
+	padding: 14px 20px;
+	display: block;  /*dùng để chỉnh tất cả thành hàng dọc */
+	text-align: center;
+	text-decoration: none; /* decoration: trang trí; dùng để huỷ bỏ những trang trí chữ;
+							vd: bỏ gạch chân của thẻ <a></a>; bỏ chuyển màu khi click vào...*/
+	/*float: left; là dchuyển tất cả qua bên trái*/
+
+}
+
+.menu_left {
+	float: left;
+}
+
+.menu_right {
+	float: right;
+}
+
+nav a:hover{ /* dùng để ktra hành động; 
+	vd: di di con trỏ chuột trên 1 cái nút thì gọi là bạn đang hover trên cái nút */
+	background: #DDD;
+	color: black;
+}/* Giải thích: nav a:hover { 
+	background: #DDD; khi phát hiện ra con chỏ chuột hover vs 1 hypertext nào đó thì
+					hypertext đó sẽ đổi mảu nền
+	color: black; khi phát hiện ra con chỏ chuột hover vs 1 hypertext nào đó thì
+				hypertext đó sẽ đổi chữ
+	}; */
+
+/*h1{
+	color: red
+	}
+h2{
+	color: yellow
+	}
+/*
+*{
+	background: blue
+}
+*/   /* trên là cách để test file css có liên kết vs file html ko
+		dấu * là chỉ toàn bộ trang web
+		*/
+
+#left_side{
+	flex: 30%;
+	background: #F1F1F1;
+	padding: 10px 20px
+}
+
+#right_side{
+	flex: 70%;
+	padding: 10px 20px;
+}
+#flex_container{
+	display: flex;
+	flex-wrap: nowrap; /*Nên dùng wrap để dễ hình dung trang web; nhưng sẽ khó hơn*/
+}
+footer{
+	background: #333;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+}
+table {
+	border-style: solid;
+}
+
+/* Styling the table */
+table {
+	border-collapse: collapse;
+}
+
+table td, table th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+table tr:nth-child(even){background: #f2f2f2;}
+
+table tr:hover {background: #ddd;}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background: #04AA6D;
+  color: white;
+}
+
+
+.family_item{
+	/*width: 33%;
+	float: left;*/
+	text-align: center;
+	flex: 33%; /*Do đã dùng cái này nên ko cần dùng 2 cái ở trên cùng nữa*/
+}
+
+.family_img{
+	width: 90%;
+}
+
+#family_container{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.family_title{
+	font-size: 150%;
+	font-weight: bold;
+	padding: 10px 10px 5px 10px;
+}
+
+.family_desc{
+	margin: 0px 10px 20px 10px;
+}
+
+/*
+@media(max-width: 800px) { 
+	* {background: red;}
+}
+
+*/ /* max là lớn nhất, width là độ dài; khi độ dài của trang ít hơn 800px thì
+baground sẽ chuyển đỏ */
+@media(max-width: 800px){ /* 800px là dùng cho ipad*/
+	#left_side{
+		flex: 100%;
+	}
+	#right_side{
+		flex: 100%;
+	}
+	#flex_container {
+		flex-wrap: wrap;
+	}
+	.family_item{
+		flex: 50%;
+	}
+}
+/*@media(max-width: 400px){  400px là dùng cho điện thoại
+	#left_side{
+		flex: 100%;
+	}
+	#right_side{
+		flex: 100%;
+	}
+	#flex_container {
+		flex-wrap: wrap;
+	}
+}*/
